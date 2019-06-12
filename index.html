@@ -2,9 +2,42 @@
 <html>
 <head>
 	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script>
+$(document).ready(function(){
+	//scroll to divs
+	$("#probutton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#projects").offset().top
+    }, 1000);
+});
+	$("#vidbutton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#videos").offset().top
+    }, 1000);
+});
+	$("#blogbutton").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#blog").offset().top
+    }, 1000);
+});
+	//end scroll to divs
+
+	      $("#bktotop").click(function () {
+        var stop = $('body').offset().top;
+        var delay = 1000;
+        $('body').animate({ scrollTop: '0px' }, 800);
+        return false;
+        $('html,body').animate({ scrollTop: 0 }, "slow");
+      });
+});
+</script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
+	<script async src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<title>Bhargav Ram</title>
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<style type="text/css">
@@ -14,7 +47,7 @@
 	</style>
 </head>
 <body>
-	<span class="menubtn" onclick="openNav()" style="position: absolute;z-index: 9999"> <i class="fa fa-list"></i> </span>
+	<!-- <span class="menubtn" onclick="openNav()" style="position: absolute;z-index: 9999"> <i class="fa fa-bars"></i> </span> -->
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">About</a>
@@ -26,34 +59,156 @@
 <div class="base text-center">
 	<img class="hero-img" src="assets/images/me.jpg">
 	<p>Bhargav Ram / 20<p>
+		<p class="subtitle"> Full Stack Developer &#128640; | Gamer &#127918; </p>
 		<hr style="width:70%">
-	<div class="row text-center" style="width:80%;margin-left:10%">
-		<div class="col">
-			<a class="btn btn-link" style="color:purple;font-size:0.8rem" href="https://twitch.tv/retr0ri3r"> <i style="color:purple;font-size: 1.8rem" class="fa fa-twitch"></i></a>
+	<div class="row text-center">
+				<div class="col">
+			<a class="nav-link" style="color:red;font-size:0.8rem" href="https://www.youtube.com/channel/UCMhkPUgssMWKE4KCvXHlDyg"> <i style="color:red" class="fa fa-youtube-play icon"></i> <br>Fortnite Streamer</a>
+		</div>
+				<div class="col">
+			<a class="nav-link" style="font-size:0.8rem;color:#00acee" href="https://twitter.com/BhargavRam_0123"> <i style="color:#00acee" class="fa fa-twitter icon"></i> <br>FrustratedLlama </a>
 		</div>
 		<div class="col">
-			<a class="btn btn-link" style="font-size:1rem" href="https://twitch.tv/retr0ri3r"> <i style="font-size: 1.8rem" class="fa fa-twitter"></i> </a>
-		</div>
-		<div class="col">
-			<a class="btn btn-link" style="color:black;font-size:1rem" href="https://github.com/BhargavKilambi"> <i style="color:black;font-size: 1.8rem" class="fa fa-github"></i></a>
+			<a class="nav-link" style="color:black;font-size:0.8rem" href="https://github.com/BhargavKilambi"> <i style="color:black;" class="fa fa-github icon"></i> <br>Bhargav Kilambi</a>
 		</div>
 	</div>
 	<hr style="width:80%">
 
 	<div class="row" style="width:50%;margin-left: 25%">
 		<div class="col">
-			<a class="btn btn-link">Projects</a>
+			<a class="nav-link" id="probutton" href="#projects" role="button">💼 Projects</a>
 		</div>
 				<div class="col">
-			<a class="btn btn-link">Videos</a>
+			<a class="nav-link" id="vidbutton" href="#videos">🎥 Videos</a>
 		</div>
 				<div class="col">
-			<a class="btn btn-link">Blog</a>
+			<a class="nav-link" id="blogbutton" href="#blog">👓 Blog</a>
 		</div>
 	</div>
 
 </div>
+<div>
+	
+	<!-- <iframe width="420" height="236" src="https://www.youtube.com/embed/cfU2edLXxi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+
+
+</div>
+</div>
+<div id="projects" class="blog">
+	<p>Projects</p>
+	<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+<div class="card" style="width:100%">
+  <div class="card-header">
+    SRGAN <a href="https://github.com/BhargavKilambi/srgan" class="btn btn-light btn-sm" style="background-color: orange">  <b>T</b> tensorflow &rarr;</a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title content">The goal of this project is to train a GAN to be able to generate images of better resolution (x4) compared to the
+given input (Using div2k dataset).</h5>
+    <p class="card-text subtitle">Based on the implementation by tensorlayer/srgan</p>
+  </div>
+</div>
+</li>
+  <li class="list-group-item">
+<div class="card" style="width:100%">
+  <div class="card-header">
+    Models vs Accuracy - CNN <a href="https://github.com/BhargavKilambi/srgan" class="btn btn-light btn-sm" style="background-color: orange">  <b>T</b> tensorflow &rarr;</a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title content">A contrast between different CNN models distinguished by different factors like activation functions, number of epochs, Batch Normalization layers etc</h5>
+    <p class="card-text subtitle">Implemented using CIFAR10 dataset.</p>
+  </div>
+</div>
+</li>
+  <li class="list-group-item">
+<div class="card">
+  <div class="card-header">
+    ChatApp <a href="https://github.com/BhargavKilambi/ChatApp-android" class="btn btn-dark btn-sm">  
+    	<img style="height: 1.2rem;width: 1.2rem" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaWQ9IkxhZ2VyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyOCAxMjg7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNFNkYwRkY7fQoJLnN0MXtmaWxsOiMyRjcyRTE7fQo8L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02NCwxNGMtMjcuNiwwLTUwLDIyLjQtNTAsNTBzMjIuNCw1MCw1MCw1MHM1MC0yMi40LDUwLTUwUzkxLjYsMTQsNjQsMTR6Ii8+PGc+PHBhdGggY2xhc3M9InN0MSIgZD0iTTg3LjQsNDcuNGMwLjYtMC44LDEtMS45LDEtM2MwLTIuNi0yLjEtNC44LTQuOC00LjhjLTEuMSwwLTIuMiwwLjQtMywxYy00LjctMy4zLTEwLjQtNS4zLTE2LjYtNS4zICAgYy0xNS44LDAtMjguNywxMi44LTI4LjcsMjguN1M0OC4yLDkyLjcsNjQsOTIuN2MxNS44LDAsMjguNy0xMi44LDI4LjctMjguN0M5Mi43LDU3LjgsOTAuNyw1Mi4xLDg3LjQsNDcuNHogTTY0LDg4LjQgICBjLTEzLjQsMC0yNC40LTEwLjktMjQuNC0yNC40YzAtMTMuNCwxMC45LTI0LjQsMjQuNC0yNC40YzUuNiwwLDEwLjcsMS45LDE0LjgsNWMwLjEsMi40LDIuMSw0LjQsNC41LDQuNWMzLjIsNC4xLDUuMSw5LjMsNS4xLDE0LjggICBDODguNCw3Ny40LDc3LjQsODguNCw2NCw4OC40eiIvPjxjaXJjbGUgY2xhc3M9InN0MSIgY3g9IjY0IiBjeT0iNjQiIHI9IjEzLjIiLz48L2c+PC9zdmc+"> Ionic
+    	<img style="height: 1.2rem;width: 1.2rem" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgYmFzZVByb2ZpbGU9InRpbnkiIGhlaWdodD0iNTEycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik0yOTcuMDM2LDIwNS41NzhsLTM2LjMzNCwzMy44MDlsLTMzLjcxNi02OC4wMDVsMTcuNDQ2LTM5LjEwOGM0LjQxNi03Ljg0LDExLjYyMS03Ljg1NSwxNi4wMzcsMCAgIEwyOTcuMDM2LDIwNS41Nzh6IiBmaWxsPSIjRkZBMDAwIi8+PHBvbHlnb24gZmlsbD0iI0Y1N0YxNyIgcG9pbnRzPSIyNjAuNzAyLDIzOS4zODYgMTI0LjkyNCwzNjUuNjk3IDIyNi45ODYsMTcxLjM4MSAgIi8+PHBhdGggZD0iTTMzNi43NzYsMTUzLjkwMWM2LjQ5MS02LjIzOSwxMy4yMDItNC4xMTEsMTQuOTEyLDQuNzI5bDM1LjM0MiwyMDUuMzc1TDI2OS44NzMsNDM0LjIyICAgYy00LjEsMi4yNjQtMTQuOTU3LDMuMjQ2LTE0Ljk1NywzLjI0NnMtOS45MS0xLjE4NS0xMy42ODctMy4yODFMMTI0LjkyLDM2NS42OUwzMzYuNzc2LDE1My45MDF6IiBmaWxsPSIjRkZDQTI4Ii8+PHBhdGggZD0iTTIyNi45ODYsMTcxLjM4MUwxMjQuOTI0LDM2NS42OTdsNDUuNDYtMjgzLjk5OGMxLjY3NC04Ljg0Nyw2LjcxLTkuNjk5LDExLjIwMy0xLjg5TDIyNi45ODYsMTcxLjM4MXoiIGZpbGw9IiNGRkEwMDAiLz48L2c+PC9zdmc+">
+
+     Firebase &rarr;</a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title content">
+    	A simple group chat hybrid mobile application built with Ionic and Node.js backend and firebase database
+    </h5>
+    <p class="card-text subtitle">Still in progress</p>
+  </div>
+</div>
+</li>
+
+  <li class="list-group-item">
+<div class="card" style="width:100%">
+  <div class="card-header">
+    Music Player <a href="https://github.com/BhargavKilambi/Music-Player" class="btn btn-light btn-sm" style="background-color: #00acee">  <img src="assets/images/flutter.svg" style="height: 1rem;width: 1rem"> Flutter / Dart &rarr;</a>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title content">A minimal music player with audio visualizer using Flutter.</h5>
+    <p class="card-text subtitle">Based on the tutorial from Matthew Carroll.</p>
+  </div>
+</div>
+</li>
+</ul>
+
+</div>
+<div id="videos" class="blog">
+	<p>Videos</p>
+	<ul class="list-group list-group-flush">
+  <li class="list-group-item text-center">
+  	<iframe width="340" height="200" src="https://www.youtube.com/embed/cfU2edLXxi8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  			<p class="subtitle">Fortnite Open Division - 4 hours YT live stream</p>
+  </li>
+  <li class="list-group-item text-center">
+<iframe width="340" height="200" src="https://www.youtube.com/embed/uHd-tPZsrW4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  			<p class="subtitle">Far Cry - New Dawn Chill Stream (Free roam and side quests)</p>
+  </li>
+    <li class="list-group-item text-center">
+<iframe width="340" height="200" src="https://www.youtube.com/embed/AdgMNSRimEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  			<p class="subtitle">Uncharted 4 - Ending and Climax</p>
+  </li>
+  <li class="list-group-item text-center">
+<iframe width="340" height="200" src="https://www.youtube.com/embed/7eO504dq0mM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  			<p class="subtitle">Apex Legends - PS4</p>
+  </li>
+
+</ul>
+</div>
+<div id="blog" class="blog">
+	<p>Blog & Articles</p>
+	<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+	<a class="embedly-card" data-card-controls="0" href="https://codeburst.io/guide-to-build-a-hybrid-mobile-app-for-ocr-and-text-to-speech-568f86752516">Guide to build a hybrid mobile app for OCR and Text-to-Speech.</a>
+</li>
+</ul>
+
+</div>
+<div>
+	
+
+
+
+<button id="bktotop" class="back-to-top" type="button" style="z-index: 10000;"></button>
 </body>
+<script type="text/javascript">
+	$(window).ready(function () {
+
+
+	      var amountScrolled = 200;
+      var amountScrolledNav = 25;
+
+	      $(window).scroll(function () {
+        if ($(window).scrollTop() > amountScrolled) {
+          $('button.back-to-top').addClass('show');
+        } else {
+          $('button.back-to-top').removeClass('show');
+        }
+      });
+
+
+});
+</script>
 <script type="text/javascript">
 	/* Set the width of the side navigation to 250px */
 function openNav() {
@@ -65,7 +220,8 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 </script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
 </html>
